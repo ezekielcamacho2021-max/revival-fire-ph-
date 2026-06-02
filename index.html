@@ -28,309 +28,34 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Montserrat',sans-serif;
-background:var(--dark);
-color:white;
-overflow-x:hidden;
-}
-
-header{
-position:fixed;
-top:0;
-width:100%;
-z-index:999;
-background:rgba(0,0,0,.75);
-backdrop-filter:blur(12px);
-}
-
-.nav{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.logo img{
-width:60px;
-height:60px;
-border-radius:50%;
-}
-
-.logo h2{
-font-size:20px;
-color:white;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-
-nav a:hover{
-color:var(--gold);
-}
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1800');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-max-width:900px;
-animation:fadeIn 1.5s ease;
-}
-
-.hero img{
-width:150px;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:72px;
-font-weight:800;
-margin-bottom:15px;
-text-transform:uppercase;
-}
-
-.hero p{
-font-size:22px;
-margin-bottom:30px;
-}
-
-.btns{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:15px 30px;
-background:var(--fire);
-border-radius:50px;
-text-decoration:none;
-color:white;
-font-weight:700;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.btn-outline{
-background:transparent;
-border:2px solid white;
-}
-
-section{
-padding:100px 20px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-margin-bottom:60px;
-color:var(--gold);
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:20px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.card{
-background:#172042;
-padding:30px;
-border-radius:18px;
-text-align:center;
-}
-
-.card h3{
-margin-bottom:15px;
-color:var(--gold);
-}
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.service-card{
-background:#172042;
-padding:30px;
-border-radius:20px;
-text-align:center;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:12px;
-}
-
-.give-box{
-background:#172042;
-padding:40px;
-border-radius:20px;
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.give-box h3{
-margin-bottom:20px;
-color:var(--gold);
-}
-
-.contact-form{
-max-width:700px;
-margin:auto;
-}
-
-input,textarea{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:none;
-border-radius:8px;
-}
-
-button{
-background:var(--fire);
-color:white;
-padding:15px 35px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-font-weight:700;
-}
-
-.social{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.social a{
-color:white;
-text-decoration:none;
-padding:12px 20px;
-background:#172042;
-border-radius:50px;
-}
-
-footer{
-background:black;
-padding:50px 20px;
-text-align:center;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-nav ul{
-display:none;
-}
-
-}
-
-</style>
-</head>
-
 <body>
+
+<a href="#give" class="floating-give">
+💛 GIVE
+</a>
 
 <header>
 
-<div class="nav">
+<div class="navbar">
 
 <div class="logo">
 <img src="logo.png" alt="Revival Fire Philippines">
-<h2>REVIVAL FIRE PHILIPPINES</h2>
+<span>REVIVAL FIRE PHILIPPINES</span>
 </div>
 
-<nav>
-<ul>
+<div class="hamburger">
+☰
+</div>
+
+<ul class="nav-links">
 <li><a href="#about">About</a></li>
 <li><a href="#pastor">Pastor</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#sermons">Sermons</a></li>
-<li><a href="#events">Events</a></li>
+<li><a href="#gallery">Gallery</a></li>
 <li><a href="#give">Give</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-</nav>
 
 </div>
 
@@ -338,9 +63,13 @@ display:none;
 
 <section class="hero">
 
+<video autoplay muted loop playsinline poster="logo.png">
+<source src="https://cdn.coverr.co/videos/coverr-worshiping-in-church-1563382737618?download=1080p" type="video/mp4">
+</video>
+
 <div class="hero-content">
 
-<img src="logo.png">
+<img src="logo.png" style="width:140px;margin-bottom:20px;">
 
 <h1>Revival Fire Philippines</h1>
 
@@ -352,21 +81,13 @@ Healing • Deliverance • Impartation
 Experience The Fire Of God
 </p>
 
-<div class="btns">
-
-<a href="#services" class="btn">
-Join Us
+<a href="#services" class="btn btn-primary">
+JOIN US
 </a>
 
-<a href="https://www.facebook.com/profile.php?id=61590663655954" class="btn btn-outline">
-Facebook
+<a href="https://www.youtube.com/@revivalfirephilippines" class="btn btn-secondary">
+WATCH ONLINE
 </a>
-
-<a href="https://www.youtube.com/@revivalfirephilippines" class="btn btn-outline">
-YouTube
-</a>
-
-</div>
 
 </div>
 
@@ -377,33 +98,32 @@ YouTube
 <div class="container">
 
 <h2 class="section-title">
-About Revival Fire Philippines
+About Us
 </h2>
 
-<div class="about">
+<div class="cards">
 
-<img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=1200">
-
-<div>
-
-<h3 style="font-size:32px;margin-bottom:20px;">
-Revival Starts Here
-</h3>
-
+<div class="card">
+<h3>Our Mission</h3>
 <p>
-Revival Fire Philippines exists to bring healing,
-deliverance, restoration, discipleship and revival
-through the transforming power of Jesus Christ.
+To bring healing, deliverance, restoration,
+discipleship and revival through Jesus Christ.
 </p>
+</div>
 
-<br>
-
+<div class="card">
+<h3>Our Vision</h3>
 <p>
-We are passionate about worship, prayer, evangelism,
-and equipping believers to walk in the power of the
-Holy Spirit.
+To see lives transformed through the power
+and presence of God.
 </p>
+</div>
 
+<div class="card">
+<h3>Our Belief</h3>
+<p>
+Jesus Christ saves, heals, delivers and empowers.
+</p>
 </div>
 
 </div>
@@ -420,26 +140,15 @@ Holy Spirit.
 Meet Pastor Gray
 </h2>
 
-<div class="about">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200">
-
-<div>
-
-<h3 style="font-size:32px;">
-Pastor Gray
-</h3>
-
-<br>
+<h3>Pastor Gray</h3>
 
 <p>
-A passionate servant of God dedicated to preaching
-the Gospel and raising revival carriers who will
-impact communities through faith, healing and
-deliverance.
+A passionate servant of God dedicated to raising
+revival carriers and equipping believers through
+the Gospel of Jesus Christ.
 </p>
-
-</div>
 
 </div>
 
@@ -455,31 +164,30 @@ deliverance.
 Service Schedule
 </h2>
 
-<div class="service-grid">
+<div class="cards">
 
-<div class="service-card">
+<div class="card">
 <h3>Monday</h3>
 <p>9:00 AM - 11:00 AM</p>
 </div>
 
-<div class="service-card">
+<div class="card">
 <h3>Wednesday</h3>
 <p>9:00 AM - 11:00 AM</p>
 </div>
 
-<div class="service-card">
+<div class="card">
 <h3>Friday</h3>
 <p>9:00 AM - 11:00 AM</p>
 </div>
 
 </div>
 
-<br><br>
+<br>
 
-<div style="text-align:center;">
-<h3>Location</h3>
-<p>Gogon, Virac, Catanduanes</p>
-</div>
+<center>
+<h3>📍 Gogon, Virac, Catanduanes</h3>
+</center>
 
 </div>
 
@@ -493,45 +201,27 @@ Service Schedule
 Latest Sermons
 </h2>
 
-<div style="text-align:center;">
-
-<iframe
-width="100%"
-height="500"
-src="https://www.youtube.com/embed/jNQXAC9IVRw"
-allowfullscreen
-style="border:none;border-radius:20px;">
-</iframe>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="events">
-
-<div class="container">
-
-<h2 class="section-title">
-Upcoming Events
-</h2>
-
 <div class="cards">
 
 <div class="card">
-<h3>Revival Night</h3>
-<p>Powerful worship and prayer gathering.</p>
+<iframe width="100%" height="250"
+src="https://www.youtube.com/embed/jNQXAC9IVRw"
+allowfullscreen>
+</iframe>
 </div>
 
 <div class="card">
-<h3>Healing Service</h3>
-<p>Experience God's healing power.</p>
+<iframe width="100%" height="250"
+src="https://www.youtube.com/embed/jNQXAC9IVRw"
+allowfullscreen>
+</iframe>
 </div>
 
 <div class="card">
-<h3>Youth Encounter</h3>
-<p>Empowering the next generation.</p>
+<iframe width="100%" height="250"
+src="https://www.youtube.com/embed/jNQXAC9IVRw"
+allowfullscreen>
+</iframe>
 </div>
 
 </div>
@@ -541,6 +231,38 @@ Upcoming Events
 </section>
 
 <section>
+
+<div class="container">
+
+<h2 class="section-title">
+Facebook Ministry Updates
+</h2>
+
+<div class="card">
+
+<p style="text-align:center;">
+Visit our Facebook page for livestreams,
+announcements and ministry updates.
+</p>
+
+<br>
+
+<center>
+
+<a href="https://www.facebook.com/profile.php?id=61590663655954"
+class="btn btn-primary">
+Visit Facebook
+</a>
+
+</center>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
 
 <div class="container">
 
@@ -566,32 +288,30 @@ Gallery
 <div class="container">
 
 <h2 class="section-title">
-Give
+Partner With The Ministry
 </h2>
 
-<div class="give-box">
+<div class="card">
 
-<h3>Partner With Revival Fire Philippines</h3>
+<h3>Give</h3>
 
 <p>
-Your generosity helps us reach people with the Gospel,
-support outreach ministries, and advance the Kingdom of God.
+Your generosity helps support evangelism,
+outreach, revival meetings and discipleship.
 </p>
 
 <br>
 
 <p>
-GCash Number: 09XX XXX XXXX
-</p>
-
-<p>
-Account Name: Revival Fire Philippines
+GCash Number:
+09XX XXX XXXX
 </p>
 
 <br>
 
 <p>
-(Add your QR Code image later)
+Account Name:
+Revival Fire Philippines
 </p>
 
 </div>
@@ -605,32 +325,30 @@ Account Name: Revival Fire Philippines
 <div class="container">
 
 <h2 class="section-title">
-Prayer Request & Contact
+Prayer Request
 </h2>
 
-<form class="contact-form">
+<div class="card">
+
+<form>
 
 <input type="text" placeholder="Your Name">
 
+<br><br>
+
 <input type="email" placeholder="Your Email">
+
+<br><br>
 
 <textarea rows="6" placeholder="Prayer Request"></textarea>
 
+<br><br>
+
 <button type="submit">
-Send Request
+Send Prayer Request
 </button>
 
 </form>
-
-<div class="social">
-
-<a href="https://www.facebook.com/profile.php?id=61590663655954">
-Facebook
-</a>
-
-<a href="https://www.youtube.com/@revivalfirephilippines">
-YouTube
-</a>
 
 </div>
 
@@ -640,11 +358,11 @@ YouTube
 
 <footer>
 
-<img src="logo.png" width="100">
+<img src="logo.png" width="120">
 
 <br><br>
 
-<h3>Revival Fire Philippines</h3>
+<h2>Revival Fire Philippines</h2>
 
 <p>
 Healing • Deliverance • Impartation
@@ -664,5 +382,8 @@ Gogon, Virac, Catanduanes
 
 </footer>
 
+<script src="main.js"></script>
+
+</body>
 </body>
 </html>
